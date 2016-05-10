@@ -1,0 +1,10 @@
+fibo(START1,START2,MAX,OUT) :-
+  START2 + START1>MAX,
+  write(OUT).
+
+fibo(START1,START2,MAX,OUT) :-
+  START2 + START1 =< MAX,
+  New is START1+START2,
+  NOUT is New,
+  fibo(START2,New,MAX,NOUT).
+
